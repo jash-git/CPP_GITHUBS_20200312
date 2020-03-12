@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="2dp"
+        android:orientation="horizontal"
+        android:transitionName="play_controls_transition">
+
+        <TextView
+            android:id="@+id/button_prev"
+            style="@style/PlaybackButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="@string/button_prev"/>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="0dp"/>
+
+        <TextView
+            android:id="@+id/button_play_pause"
+            style="@style/PlaybackButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="@string/button_play"/>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="0dp"/>
+
+        <TextView
+            android:id="@+id/button_next"
+            style="@style/PlaybackButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="@string/button_next"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="2dp"/>
+
+    <io.casey.musikcube.remote.ui.shared.view.InterceptTouchFrameLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="24dp"
+        android:background="@drawable/category_button"
+        android:transitionName="play_queue_transition">
+
+        <me.zhanghai.android.materialprogressbar.MaterialProgressBar
+            style="@style/Widget.MaterialProgressBar.ProgressBar.Horizontal"
+            android:id="@+id/progress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.25"
+            android:secondaryProgress="50"
+            android:progress="25"
+            android:max="100"
+            android:padding="0dp"
+            android:layout_margin="0dp"
+            android:indeterminate="false"
+            app:mpb_progressBackgroundTint="@color/theme_background"
+            app:mpb_progressStyle="horizontal"
+            app:mpb_useIntrinsicPadding="false"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:orientation="horizontal">
+
+            <ProgressBar
+                android:id="@+id/buffering"
+                style="?android:attr/progressBarStyleSmall"
+                android:paddingRight="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"/>
+
+            <TextView
+                style="@style/TransportPlaying"
+                android:id="@+id/track_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="@color/theme_disabled_foreground"
+                android:text="@string/transport_not_playing"/>
+
+        </LinearLayout>
+
+    </io.casey.musikcube.remote.ui.shared.view.InterceptTouchFrameLayout>
+
+</LinearLayout>

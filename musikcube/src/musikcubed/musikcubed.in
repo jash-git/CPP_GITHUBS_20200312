@@ -1,0 +1,6 @@
+#!/bin/sh
+
+set -eu
+
+cd "@musikcube_INSTALL_DIR@"/share/musikcube/
+exec ./musikcubed "$@"

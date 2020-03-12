@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_add_to_playlist"
+        android:title="@string/menu_add_to_playlist"/>
+
+    <item
+        android:id="@+id/menu_remove_from_playlist"
+        android:title="@string/menu_remove_from_playlist"/>
+
+    <item
+        android:id="@+id/menu_show_artist_tracks"
+        android:title="@string/menu_show_artist_tracks"/>
+
+    <item
+        android:id="@+id/menu_show_artist_albums"
+        android:title="@string/menu_show_albums"/>
+
+    <item
+        android:id="@+id/menu_download_ringtone"
+        android:title="@string/menu_download_ringtone"/>
+
+</menu>
